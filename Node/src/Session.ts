@@ -47,6 +47,7 @@ export interface ISessionArgs {
 export class Session extends events.EventEmitter implements ISession {
     private msgSent = false;
     private _isReset = false;
+    private _isGarbage = false;
 
     constructor(protected args: ISessionArgs) {
         super();
